@@ -1,0 +1,24 @@
+@for $m from 28 through 31 {
+  .calendar-#{$m} {
+    @for $d from 1 through $m {
+
+      div:nth-child(#{$d}) {
+        @include square-styles;
+
+        &:hover {
+          @include square-hover;
+        }
+      }
+
+      div:nth-child(#{$d})::after {
+        content: "#{$d}";
+      }
+    }
+  }
+}
+
+@each $week-d, $num in $days {
+  .calendar-#{$week-d} div:first-child {
+    margin-left: ($size-square + $size-indent) * $num;
+  }
+}

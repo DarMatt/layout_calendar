@@ -1,0 +1,7 @@
+.calendar {
+  display: flex;
+  flex-wrap: wrap;
+  width: 706px;
+  gap: $size-indent;
+  margin: 15vh auto;
+}

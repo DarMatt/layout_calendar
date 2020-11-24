@@ -1,0 +1,16 @@
+@mixin square-styles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: $size-square;
+  width: $size-square;
+  border: 1px solid #000;
+  background-color: #eee;
+}
+
+@mixin square-hover {
+  cursor: pointer;
+  background-color: pink;
+  transform: translate(0 , -20px);
+  transition: background-color 0.5s, transform 0.5s;
+}
